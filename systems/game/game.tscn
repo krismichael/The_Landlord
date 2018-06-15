@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://systems/game/game.gd" type="Script" id=1]
+[ext_resource path="res://world/world.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://gui/hud/hud.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gui/menu/menu.tscn" type="PackedScene" id=5]
+
+[node name="gx" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="world" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="player" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="hud" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="menu" parent="." index="3" instance=ExtResource( 5 )]
+
+
