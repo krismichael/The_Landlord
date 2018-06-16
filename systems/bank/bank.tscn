@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://systems/bank/bank.gd" type="Script" id=1]
+
+[node name="bank" type="Node" index="0"]
+
+script = ExtResource( 1 )
+loan_min = 0
+loan_max = 0
+loan_rate = 0
+
+
