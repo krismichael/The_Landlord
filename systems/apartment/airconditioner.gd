@@ -84,9 +84,10 @@ func damaged():
 #-------------------------
 
 func repair():
-	health = 100
+	health = range(101, 151)[randi()%range(101, 151).size()]
 	is_running = true
 	$"smoke".set_emitting(false)
+	$"../tenant".satisfaction = true
 
 
 #----------------------------------------------------------------------------------------------------
@@ -94,14 +95,17 @@ func repair():
 #----------------------------------------------------------------------------------------------------
 
 #-------------------------
-# repaire
+# repair
 #-------------------------
 
 func _on_btn_action_repair_pressed():
-	p_financial.cash = p_financial.cash - 250
-	repair()
-	$"btn_action_repair".hide()
-	$"thermometer".show()
+
+	if ($"../".occupied):
+		if (p_financial.cash > 249):
+			p_financial.cash = p_financial.cash - 250
+			repair()
+			$"btn_action_repair".hide()
+			$"thermometer".show()
 
 
 #----------------------------------------------------------------------------------------------------

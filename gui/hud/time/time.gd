@@ -6,8 +6,8 @@ extends Control
 
 onready var w_clock = $"/root/gx/world/clock"
 
-var ampm = null
 var hours_display = 0
+var days_display = 0
 
 
 #----------------------------------------------------------------------------------------------------
@@ -16,23 +16,16 @@ var hours_display = 0
 
 func _process(delta):
 
-	if (w_clock.time_hours > 11):
-		ampm = "PM"
-	else:
-		ampm = "AM"
-
-
-	if (w_clock.time_hours > 12):
-		hours_display = w_clock.time_hours - 12
+	if (w_clock.time_hours < 1):
+		hours_display = 24
 	else:
 		hours_display = w_clock.time_hours
 
-	if (w_clock.time_hours < 1):
-		hours_display = 12
+	days_display = w_clock.time_days + 1
 
-
+	$"time".set_text(str("%02d:%02d" % [hours_display, w_clock.time_minutes]))
 	$"season".set_text(str(w_clock.season_curr))
-	$"date".set_text(str("%02d : %02d %s" % [hours_display, w_clock.time_minutes, ampm]))
+	$"date".set_text(str("DAY: %02d" % [days_display]))
 
 
 #----------------------------------------------------------------------------------------------------

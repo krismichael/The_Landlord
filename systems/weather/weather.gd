@@ -40,11 +40,6 @@ func _ready():
 	set_temperature_curr()
 	day_next = w_clock.time_days + 1
 
-# Debugging
-#	print("TEMPERATURE / season: ", temperature_season)
-#	print("TEMPERATURE / variable: ", temperature_variable)
-#	print("TEMPERATURE / temperature_curr: ", temperature_curr)
-
 
 #----------------------------------------------------------------------------------------------------
 # _process

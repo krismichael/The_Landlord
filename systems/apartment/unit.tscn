@@ -118,6 +118,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
+apartment_number = 0
 value = 0
 
 [node name="animation" type="AnimationPlayer" parent="." index="0"]

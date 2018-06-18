@@ -8,7 +8,7 @@ extends Node
 # const
 #-------------------------
 
-const TIME_SPEED = 6000
+const TIME_SPEED = 480
 
 
 #-------------------------
@@ -39,20 +39,20 @@ func _process(delta):
 
 	time_units += TIME_SPEED * delta
 
-	if (time_seconds > 59):
-		time_minutes += 1
-		time_seconds = 0
-		time_units = 0
-	else:
-		time_seconds = time_units
-
 	if (time_minutes > 59):
 		time_hours += 1
 		time_minutes = 0
+		time_units = 0
+	else:
+		time_minutes = time_units
 
-	if (time_hours > 24):
+	if (time_hours > 23):
 		time_days += 1
 		time_hours = 0
+
+	if (time_days > 29):
+		time_months += 1
+		time_days = 0
 
 
 #----------------------------------------------------------------------------------------------------

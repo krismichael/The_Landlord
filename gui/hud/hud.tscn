@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://gui/hud/hud.gd" type="Script" id=1]
 [ext_resource path="res://gui/assets/graphic/96x96_FFFFFF.png" type="Texture" id=2]
 [ext_resource path="res://gui/hud/cash/cash.tscn" type="PackedScene" id=3]
-[ext_resource path="res://gui/hud/weather/weather.tscn" type="PackedScene" id=4]
-[ext_resource path="res://gui/hud/time/time.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gui/hud/time/time.tscn" type="PackedScene" id=4]
+[ext_resource path="res://gui/hud/weather/weather.tscn" type="PackedScene" id=5]
+[ext_resource path="res://gui/hud/tenants/tenants.tscn" type="PackedScene" id=6]
 
 [node name="hud" type="CanvasLayer"]
 
@@ -43,20 +44,28 @@ margin_right = 60.0
 margin_bottom = 60.0
 _sections_unfolded = [ "Rect" ]
 
-[node name="weather" parent="." index="2" instance=ExtResource( 4 )]
+[node name="time" parent="." index="2" instance=ExtResource( 4 )]
 
-margin_left = 1772.0
+margin_left = 1152.0
+margin_top = 20.0
+margin_right = 1192.0
+margin_bottom = 60.0
+_sections_unfolded = [ "Rect" ]
+
+[node name="weather" parent="." index="3" instance=ExtResource( 5 )]
+
+margin_left = 1644.0
 margin_top = 29.0
-margin_right = 1812.0
+margin_right = 1684.0
 margin_bottom = 69.0
 _sections_unfolded = [ "Rect" ]
 
-[node name="time" parent="." index="3" instance=ExtResource( 5 )]
+[node name="tenants" parent="." index="4" instance=ExtResource( 6 )]
 
-margin_left = 1536.0
-margin_top = 20.0
-margin_right = 1576.0
-margin_bottom = 60.0
+margin_left = 512.0
+margin_top = 26.0
+margin_right = 552.0
+margin_bottom = 66.0
 _sections_unfolded = [ "Rect" ]
 
 

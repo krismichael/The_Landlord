@@ -4,16 +4,13 @@ extends Control
 #
 #----------------------------------------------------------------------------------------------------
 
-onready var w_weather = $"/root/gx/world/weather"
+var vacancy_count = 0
+var display_count = 0
 
-
-#----------------------------------------------------------------------------------------------------
-#
-#----------------------------------------------------------------------------------------------------
 
 func _process(delta):
-	$"thermometer".set_value(w_weather.temperature_curr)
-	$"content".set_text(str("%s Degrees" % w_weather.temperature_curr))
+	display_count = 11 - vacancy_count
+	$"number".set_text(str(display_count))
 
 
 #----------------------------------------------------------------------------------------------------

@@ -7,10 +7,10 @@ path="res://.import/thermometer_empty.png-dd206511330278f3126c3a7124ea74fa.stex"
 [deps]
 
 source_file="res://world/thermometer_empty.png"
-source_md5="4704f8f3c5f9a45e7bbcc33b46884541"
+source_md5="376ac067afdc7ce8a2ee8be1a7227211"
 
 dest_files=[ "res://.import/thermometer_empty.png-dd206511330278f3126c3a7124ea74fa.stex" ]
-dest_md5="aa59640a592683a07e24858c48348a65"
+dest_md5="c874823c0bdefc8f72c6009e1ed7a981"
 
 [params]
 
