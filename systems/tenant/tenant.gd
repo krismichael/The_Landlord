@@ -129,6 +129,8 @@ func _on_timer_e_timeout():
 		add_child(timer_f)
 		timer_f.start()
 
+	# Game breaking bug from time to time. Investigate later.
+	print("timer_e")
 	$"timer_e".queue_free()
 
 

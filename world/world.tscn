@@ -7,7 +7,7 @@
 [ext_resource path="res://world/cityscape.tscn" type="PackedScene" id=5]
 [ext_resource path="res://systems/apartment/apartment.tscn" type="PackedScene" id=6]
 
-[node name="world" type="Node2D"]
+[node name="world" type="Node2D" index="0"]
 
 [node name="bank" parent="." index="0" instance=ExtResource( 1 )]
 

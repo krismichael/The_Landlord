@@ -21,6 +21,8 @@ var occupancy = {
 var occupancy_count = 0
 var end_count = 1
 
+var state_game_end = false
+
 
 #----------------------------------------------------------------------------------------------------
 # _process
@@ -39,7 +41,7 @@ func _process(delta):
 		end_count += 1
 
 	if (occupancy_count == 11):
-		print("GAME OVER")
+		state_game_end = true
 
 	occupancy_count = 0
 
