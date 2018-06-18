@@ -12,10 +12,11 @@ onready var p_financial = $"/root/gx/player/data/financial"
 #----------------------------------------------------------------------------------------------------
 
 func _process(delta):
+
 #	$"cash".set_text(str("$ ", p_financial.cash))
 	$"debt".set_text(str("DEBT: $ ", p_financial.debt))
 
-	$"cash".set_text(str("$ 34,000"))
+	$"cash".set_text(str("$%s" % p_financial.cash))
 
 
 #----------------------------------------------------------------------------------------------------

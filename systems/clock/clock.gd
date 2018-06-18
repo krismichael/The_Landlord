@@ -1,51 +1,50 @@
 extends Node
 
 #----------------------------------------------------------------------------------------------------
-#
+# globals
 #----------------------------------------------------------------------------------------------------
 
 #-------------------------
-# storage
+# const
 #-------------------------
 
-var time_years = 0
-var time_months = 0
-var time_days = 0
-var time_hours = 0
-var time_minutes = 0
+const TIME_SPEED = 6000
+
+
+#-------------------------
+# variables
+#-------------------------
+
+var time_units = 0
 var time_seconds = 0
+var time_minutes = 0
+var time_hours = 0
+var time_days = 0
+var time_months = 0
+var time_years = 0
 
 
 #-------------------------
-# config
+# season
 #-------------------------
 
-var time_speed = 6000
-var time_unit = 0
+var season_curr = "WINTER"
 
-#-------------------------
-#
-#-------------------------
-
-var season = "SUMMER"
-var day = 1
 
 #----------------------------------------------------------------------------------------------------
 #
 #----------------------------------------------------------------------------------------------------
-
-func _ready():
-	set_process(true)
 
 func _process(delta):
-	time_unit += time_speed * delta
+
+	time_units += TIME_SPEED * delta
 
 	if (time_seconds > 59):
 		time_minutes += 1
 		time_seconds = 0
-		time_unit = 0
+		time_units = 0
 	else:
-		time_seconds = time_unit
+		time_seconds = time_units
 
 	if (time_minutes > 59):
 		time_hours += 1
@@ -54,7 +53,6 @@ func _process(delta):
 	if (time_hours > 24):
 		time_days += 1
 		time_hours = 0
-
 
 
 #----------------------------------------------------------------------------------------------------

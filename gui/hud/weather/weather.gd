@@ -4,11 +4,16 @@ extends Control
 #
 #----------------------------------------------------------------------------------------------------
 
-onready var w_temperature_curr = $"/root/gx/world/weather".temperature_curr
+onready var w_weather = $"/root/gx/world/weather"
+
+
+#----------------------------------------------------------------------------------------------------
+#
+#----------------------------------------------------------------------------------------------------
 
 func _process(delta):
-	$"thermometer".set_value(w_temperature_curr)
-	$"content".set_text(str("%s degrees" % w_temperature_curr))
+	$"thermometer".set_value(w_weather.temperature_curr)
+	$"content".set_text(str("%s degrees" % w_weather.temperature_curr))
 
 
 #----------------------------------------------------------------------------------------------------

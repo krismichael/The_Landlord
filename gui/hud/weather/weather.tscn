@@ -4,7 +4,7 @@
 [ext_resource path="res://world/thermometer_empty.png" type="Texture" id=2]
 [ext_resource path="res://gui/assets/font/OpenSans-Bold.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="StyleBoxFlat" id=4]
+[sub_resource type="StyleBoxFlat" id=1]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -32,7 +32,7 @@ shadow_size = 0
 anti_aliasing = true
 anti_aliasing_size = 1
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=2]
 
 content_margin_left = -1.0
 content_margin_right = -1.0
@@ -68,7 +68,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="weather" type="Control" index="0"]
+[node name="weather" type="Control"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -116,8 +116,8 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 0
-custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 5 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
 min_value = 20.0
 max_value = 120.0
 step = 1.0

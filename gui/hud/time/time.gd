@@ -1,7 +1,7 @@
 extends Control
 
 #----------------------------------------------------------------------------------------------------
-#
+# globals
 #----------------------------------------------------------------------------------------------------
 
 onready var w_clock = $"/root/gx/world/clock"
@@ -9,6 +9,10 @@ onready var w_clock = $"/root/gx/world/clock"
 var ampm = null
 var hours_display = 0
 
+
+#----------------------------------------------------------------------------------------------------
+# _process
+#----------------------------------------------------------------------------------------------------
 
 func _process(delta):
 
@@ -27,7 +31,8 @@ func _process(delta):
 		hours_display = 12
 
 
-	$"content".set_text(str("%02d : %02d %s %s" % [hours_display, w_clock.time_minutes, ampm, w_clock.season]))
+	$"season".set_text(str(w_clock.season_curr))
+	$"date".set_text(str("%02d : %02d %s" % [hours_display, w_clock.time_minutes, ampm]))
 
 
 #----------------------------------------------------------------------------------------------------
