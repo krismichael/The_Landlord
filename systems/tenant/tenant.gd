@@ -79,7 +79,7 @@ func set_dialogue():
 	timer_s.set_wait_time(2)
 	timer_s.connect("timeout", self, "_on_timer_s_timeout")
 	timer_s.set_name("timer_s")
-	add_child(timer_s)
+	self.add_child(timer_s)
 	timer_s.start()
 
 	satisfaction = false
@@ -89,7 +89,7 @@ func set_dialogue():
 	timer_e.set_wait_time(tolerance_duration)
 	timer_e.connect("timeout", self, "_on_timer_e_timeout")
 	timer_e.set_name("timer_e")
-	add_child(timer_e)
+	self.add_child(timer_e)
 	timer_e.start()
 
 	$"dialogue/content".set_text(str(dialogue_start[range(1, 4)[randi()%range(1, 4).size()]]))
@@ -126,12 +126,14 @@ func _on_timer_e_timeout():
 		timer_f.set_wait_time(2)
 		timer_f.connect("timeout", self, "_on_timer_f_timeout")
 		timer_f.set_name("timer_f")
-		add_child(timer_f)
+		self.add_child(timer_f)
 		timer_f.start()
 
+
 	# Game breaking bug from time to time. Investigate later.
-	print("timer_e")
-	$"timer_e".queue_free()
+	#print("timer_e")
+	if (self.has_node("timer_e")):
+		$"timer_e".queue_free()
 
 
 #-------------------------

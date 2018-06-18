@@ -12,7 +12,7 @@ onready var t_tolerance = $"../tenant"
 
 var is_running = true
 var is_damaged = false
-var health = 100
+var health = 125
 
 var day_next = 0
 
@@ -84,7 +84,7 @@ func damaged():
 #-------------------------
 
 func repair():
-	health = range(101, 151)[randi()%range(101, 151).size()]
+	health = range(101, 151)[randi()%range(101, 171).size()]
 	is_running = true
 	$"smoke".set_emitting(false)
 	$"../tenant".satisfaction = true
@@ -101,8 +101,8 @@ func repair():
 func _on_btn_action_repair_pressed():
 
 	if ($"../".occupied):
-		if (p_financial.cash > 249):
-			p_financial.cash = p_financial.cash - 250
+		if (p_financial.cash > 74):
+			p_financial.cash = p_financial.cash - 75
 			repair()
 			$"btn_action_repair".hide()
 			$"thermometer".show()
